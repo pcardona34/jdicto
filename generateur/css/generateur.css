@@ -1,0 +1,263 @@
+/* 
+ * generateur.css
+ * 
+ * Feuille de style du Générateur de jDicto
+ * ( c ) 2012 Patrick Cardona
+ * Version : 1.0.0
+ * 
+ * @source: http://code.google.com/p/dicto/
+ * 
+ */
+
+
+ 
+/* =================================================================== */
+/* LICENCE
+/* =================================================================== */
+/*
+@licstart  The following is the entire license notice for the 
+    CSS code in this page.
+
+Copyright (C) 2012  Patrick CARDONA - A propos
+
+    The CSS code in this page is free software: you can
+    redistribute it and/or modify it under the terms of the GNU
+    General Public License (GNU GPL) as published by the Free Software
+    Foundation, either version 3 of the License, or (at your option)
+    any later version.  The code is distributed WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS
+    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+    As additional permission under GNU GPL version 3 section 7, you
+    may distribute non-source (e.g., minimized or compacted) forms of
+    that code without the copy of the GNU GPL normally required by
+    section 4, provided you include this license notice and a URL
+    through which recipients can access the Corresponding Source.
+    
+@licend  The above is the entire license notice
+    for the CSS code in this page.    
+*/
+
+body{
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+}
+
+#infos{
+	display:none;
+	margin-left:2.4em;
+	margin-right:2.4em;
+	padding-left:2em;
+	padding-right:2em;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	clear:both;
+}
+
+#actions{
+	width:60%;
+	float: left;
+	
+}
+
+#zone_aide{
+	width:36%;
+	float: left;
+	padding-right: 30px;
+}
+
+#infos h2, #zone_aide h2{
+	color:#1E90FF;
+}
+
+#menu{
+	display:none;
+}
+
+div[id^="etape"]{
+	/*display:none;*/
+	height:60%;
+	background-color:#CCCCCC; /* vert clair */
+	padding:2em;
+	margin-left:30px;
+	margin-right:30px;
+	margin-top: -10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+a:hover, #menu li a:hover, a:visited{
+	color:#1E90FF;
+	text-decoration:none;
+}
+
+h1 {
+	font-size:1.2em;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	color:#1E90FF;	/* Orange */
+	text-align: center;
+}
+
+h2 {
+	font-size:1.2em;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	color:#666666;	/* vert foncé */
+}
+
+legend {
+	color:#666666;	/* vert foncé */
+	font-size:0.8em;
+}
+
+a[title^="aide"]:hover{
+	cursor:help;	
+}
+
+a[title="aide_audio"]{
+	background-color: #886699;
+	color:#FFFFFF;
+	text-decoration:none;
+	padding: 0.3em;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+}
+
+a[title="aide_audio"]:hover{
+	cursor:help;
+	background-color:#1E90FF;	
+}
+
+input[type="submit"], a[title="donnees"]{
+	background-color:#886699; /* vert foncé */
+	color:white;
+	font-size:0.9em;
+	margin:1em;
+	padding:0.4em;
+	cursor: pointer;
+	border:none;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+    
+}
+
+a[title="donnees"]{
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:1em;
+	text-decoration:none;
+}
+
+.mousedown{
+	box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5) inset,
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+	color:#1E90FF;
+}
+	
+
+#lien_code{
+	padding-left:3em;
+	padding-top: 2em;
+}
+
+input[type="submit"]:hover, a[title="donnees"]:hover{
+	background-color:#1E90FF;
+}
+
+input[type="text"]{
+	width: 300px;		
+}
+
+footer{
+	padding-top:1em;
+	font-size:0.8em;
+	text-align:center;
+	color:gray;	
+}
+
+#copy{
+	font-size:0.8em;
+	text-align:center;
+	color:gray;
+}
+
+.bleu {
+	color:#1E90FF;
+}
+
+em {
+	color:#1E90FF;
+}
+
+code {
+	color:#1E90FF;
+	font-size:1.4em;
+}
+
+
+#enregistrement {
+	margin-left:1.5em;
+}
+
+#bloc_barre {
+	margin-left:1.5em;
+}
+
+#zonetexte_Dictee_count, #zonetexte_Echo_count{
+	color: #886699;
+}
+
+.rouge{
+	background-color: #886699;
+	color: white;
+}
+
+.clique{
+	background-color: #3EA0FF;
+	color: white;
+}
+
+#dictees{
+	border : white 10px solid;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#dictees tr td{
+	padding:4px;
+}
+
+#dictees tr:nth-child(even){
+	background-color:#BFDFFF;
+}
+
+#dictees tr:nth-child(odd){
+	background-color:white;
+}
+
+fieldset{
+	border:white solid 2px;
+	
+	color:#1E8FFF;
+	-moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -khtml-border-radius: 12px;
+    border-radius: 12px;
+}
+
+legend{
+	color: white;
+}
+
+textarea, input[type='text']{
+	font-size:1.1em;
+}

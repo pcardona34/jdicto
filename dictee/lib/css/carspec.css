@@ -1,0 +1,86 @@
+/*
+ * carspec.css
+ *  
+ * ( c ) 2012 Patrick Cardona
+ * jDicto version : 1.0.0
+ */
+
+/* =================================================================== */
+/* LICENCE
+/* =================================================================== */
+/*
+@licstart  The following is the entire license notice for the 
+    CSS code in this page.
+
+Copyright (C) 2012  Patrick CARDONA - jDicto
+
+    The CSS code in this page is free software: you can
+    redistribute it and/or modify it under the terms of the GNU
+    General Public License (GNU GPL) as published by the Free Software
+    Foundation, either version 3 of the License, or (at your option)
+    any later version.  The code is distributed WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS
+    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+    As additional permission under GNU GPL version 3 section 7, you
+    may distribute non-source (e.g., minimized or compacted) forms of
+    that code without the copy of the GNU GPL normally required by
+    section 4, provided you include this license notice and a URL
+    through which recipients can access the Corresponding Source.
+    
+@licend  The above is the entire license notice
+    for the CSS code in this page.    
+*/
+
+#table_spec, #table_spec_Dictee, #table_spec_Echo, #table_spec_BIS{
+	margin-left:0.5em;
+	margin-bottom: 0.2em;
+	border: 2px #869 solid;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#table_spec caption, #table_spec_Dictee caption, #table_spec_Echo caption, #table_spec_BIS caption{
+	color:#886699;
+}
+
+.spec, .spec_Dictee, .spec_Echo, .spec_BIS {
+	margin:0.2em;
+	padding:0.3em;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	text-align:center;
+	background-color:#CCCCCC;
+	font-size:1em;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;	
+}
+
+.spec:hover, .spec_Dictee:hover, .spec_Echo:hover, .spec_BIS:hover {
+	background-color:#CC99FF;
+	cursor:pointer;
+	box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.aide {
+	padding-top:0.1em;
+	padding-left:0.2em;
+	padding-right:0.2em;
+	background-color:#886699;
+	color:white;
+	text-decoration:none;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;	
+}
+
+.aide:hover{
+	background-color: #6cf;
+}

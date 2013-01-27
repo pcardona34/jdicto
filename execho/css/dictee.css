@@ -1,0 +1,209 @@
+/*
+ * dictee.css
+ *  
+ * ( c ) 2012 Patrick Cardona
+ * jDicto version : 1.0.1
+ */
+
+/* =================================================================== */
+/* LICENCE
+/* =================================================================== */
+/*
+@licstart  The following is the entire license notice for the 
+    CSS code in this page.
+
+Copyright (C) 2012  Patrick CARDONA - Dicto
+
+    The CSS code in this page is free software: you can
+    redistribute it and/or modify it under the terms of the GNU
+    General Public License (GNU GPL) as published by the Free Software
+    Foundation, either version 3 of the License, or (at your option)
+    any later version.  The code is distributed WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS
+    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+    As additional permission under GNU GPL version 3 section 7, you
+    may distribute non-source (e.g., minimized or compacted) forms of
+    that code without the copy of the GNU GPL normally required by
+    section 4, provided you include this license notice and a URL
+    through which recipients can access the Corresponding Source.
+    
+@licend  The above is the entire license notice
+    for the CSS code in this page.    
+*/
+
+body {
+	padding:0.5em;
+}
+
+
+#accueil{
+	text-align: center;
+}
+
+header {
+	padding:0.1em;
+	margin-left:2em;
+	margin-right:2em;
+	background-color:#CCCCCC;
+	font-size:0.8em;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);	
+}
+
+#cadre_prof {
+	text-align:right;
+	margin-top:0.25em;
+	margin-right:4em;
+	margin-bottom:3em;
+	color:#66CCFF;
+	font-size: 0.8em;
+	font-weight: bold;	
+}
+
+#cadre_bib {
+	text-align:left;
+	font-size:1em;
+}
+
+section {
+	margin-left:3em;
+	margin-right:2em;	
+}
+
+aside {
+	margin-left:1em;
+		
+}
+
+footer {
+	margin-top:1em;
+	border-top: solid #CCCCCC 2px;
+	color:#999999;
+	font-size:0.8em;
+	text-align:center;	
+}
+
+h1, h2 {
+	font-family:Arial,Helvetica,"Sans serif";
+}
+
+h1 {
+	font-size:1.4em;	
+}
+
+h2 {
+	color:#66CCFF;
+	font-size:1.1em;	
+}
+
+#titre_principal {
+	color:#666666;
+	text-align:center;	
+}
+
+#bib {
+	margin-left:2em;
+	font-size:1.2em;
+	color:#808080;
+}
+
+#correction, #solution {
+	font-size:1.6em;
+	margin-top:0.5em;
+	padding-bottom:1.5em;
+	padding-right:1.5em;
+	padding-left:0.5em;	
+}
+
+#dictee {
+	font-size:1.2em;	
+}
+
+del {
+	color:red;	
+}
+
+ins {
+	color:green;	
+}
+
+#auteur {
+	font-variant:small-caps;	
+}
+
+#ouvrage {
+	font-style:italic;	
+}
+
+#ecrire {
+		background-color:#CCCCCC;
+}
+
+
+textarea, fieldset {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+textarea#texte {
+	font-size: 2em;
+}
+
+fieldset {
+	padding:1em;
+		
+}
+
+#section_1, #section_1_bis {
+	clear:both;	
+}
+
+#section_2, #section_3 {
+	border-top:dotted thick #66CCFF;
+	margin-left:3em;
+}
+
+#section_4 {
+	text-align:center;	
+}
+
+input[type="submit"]:hover, a[title="donnees"]:hover{
+	background-color:#1E90FF;
+}
+
+input[type="submit"], a[title="donnees"]{
+	background-color:#886699;
+	color:white;
+	font-size:0.9em;
+	padding:0.4em;
+	cursor: pointer;
+	border:none;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);   
+}
+
+.audio {
+	padding:1.5em;
+	background-color:#CCCCCC;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+
