@@ -6,7 +6,7 @@
         "name": "Patrick Cardona",
         "url": "https://github.com/pcardona34/jdicto"
     },
-    "lanch_path":"/jdicto",
+    "launch_path":"/jdicto",
     "installs_allowed_from": [
         "*"
     ],
