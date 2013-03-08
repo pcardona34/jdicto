@@ -6,13 +6,14 @@
         "name": "Patrick Cardona",
         "url": "https://github.com/pcardona34/jdicto"
     },
+    "lanch_path":"/jdicto",
     "installs_allowed_from": [
         "*"
     ],
     "icons": {
-        "16": "/generateur/img/icon_16.png",
-        "48": "/generateur/img/icon_48.png",
-        "128": "/generateur/img/icon_128.png"
+        "16": "/jdicto/generateur/img/icon_16.png",
+        "48": "/jdicto/generateur/img/icon_48.png",
+        "128": "/jdicto/generateur/img/icon_128.png"
     }
 }
 
