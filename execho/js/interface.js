@@ -131,7 +131,7 @@ $("#accueil").fadeIn(2000, function() {
 	
 	// Aide contextuelle
 	$(".aide").click(function(e){
-			jAlert ("Cliquez sur un caractère spécial pour l'insérer dans votre texte.","Aide : insertion de caractères");
+			jAlert ("Cliquez d'abord dans le texte, à l'endroit désiré, puis cliquez sur un bouton caractère spécial pour l'insérer dans votre texte.","Aide : insertion de caractères");
 			e.preventDefault();
 		});
 		
