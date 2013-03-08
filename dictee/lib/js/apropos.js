@@ -95,7 +95,7 @@ oApropos.prototype.affiche = function() {
 	jAlert ( msg, "À propos..." );	
 }
 
-var apropos = new oApropos("Patrick Cardona", "2012", "jDicto", "1.3.2");
+var apropos = new oApropos("Patrick Cardona", "2012-2013", "jDicto", "1.3.3");
 
 // App ou API courantes :
 apropos.ajoute ("jQuery", "http://jquery.com/", "BOTH", "http://docs.jquery.com/Source_Code");
