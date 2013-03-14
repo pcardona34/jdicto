@@ -423,8 +423,7 @@ function contenu_Presentation(){
 		contenu += "<p>Pour voir un exemple :</p>";
 		contenu += "<ul><li>De dictée : menu <em>Actions / exemple de dictée</em>&nbsp;;</li>";
 		contenu += "<li>De réécriture : menu <em>Actions / exemple de réécriture</em></li></ul>";
-		contenu += "<p>Le présent générateur, qui permet de créer les données textuelles de chaque type d'exercice, ";
-		contenu += "est une application Chrome.</p>";
+		contenu += "<p>Le présent générateur permet de créer les données textuelles de chaque type d'exercice.</p>";
 		contenu += "<p>Pour créer :</p>";
 		contenu += "<ul><li>Une dictée : menu <em>Actions / nouvelle dictée&hellip;</em></li>";
 		contenu += "<li>Une réécriture : menu <em>Actions / nouvelle réécriture&hellip;</em></li></ul>";
