@@ -1,3 +1,0 @@
-Placez dans ce dossier vos deux enregistrements :
-- dicteexyz.mp3
-- dicteexyz.ogg

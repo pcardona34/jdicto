@@ -3,7 +3,7 @@
  * 
  * Gestion des événements dans le générateur de jDicto
  * (c) 2012 - Patrick Cardona
- * jDicto version : 1.3.0
+ * jDicto version : 1.4.0
  * 
  * @source: http://code.google.com/p/jdicto/
  * 
@@ -679,7 +679,7 @@ $("input:submit").click(function(e){
 		
 		case "Télécharger une réécriture...":
 			
-    			window.location.href = "./generateur/res/execho.zip";
+    			window.location.href = "https://github.com/pcardona34/execho/archive/master.zip";
 			
 		break;
 		

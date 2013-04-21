@@ -332,9 +332,9 @@ function contenu_Exerciseur_Dictee(){
  
 function contenu_Exerciseur_Echo(){
 		
-		var contenu = "<ol><li>Obtenez une copie de l'exerciseur exEcho <code>execho.zip</code><br />";	
+		var contenu = "<ol><li>Obtenez une copie de l'exerciseur exEcho <code>execho-master.zip</code><br />";	
     	contenu += "en cliquant sur le bouton ci-contre&nbsp;;</li>";
-    	contenu += "<li>Décompressez-la. Vous obtenez un dossier&nbsp;: <code>execho</code>&nbsp;;</li>";
+    	contenu += "<li>Décompressez-la. Vous obtenez un dossier&nbsp;: <code>execho-master</code>&nbsp;;</li>";
     	contenu += "<li>Déplacez-y le fichier <code>data.json</code>.</li>";
     	contenu += "<p>Pour publier cet exercice de réécriture sur un serveur, renommez, puis compressez à nouveau ce dossier ";
     	contenu += "<code>execho</code> mis à jour.</p>";
