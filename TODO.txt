@@ -1,2 +1,0 @@
-À chaque nouvelle version, créer archive dictee.zip et execho.zip 
-dans le dossier ‘res’ après réduction des js et css.

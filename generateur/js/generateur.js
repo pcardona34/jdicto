@@ -201,7 +201,7 @@ function action_Creation_Echo(){
 
 function action_Texte_Dictee(){
 	var monAction ="<div id='etape_Action_Texte_Dictee'><h2>Saisir le texte de la dictée</h2>";   
-  	monAction += "<form><table id='table_spec_Dictee'>";
+  	monAction += "<form name='formulaire_zonetexte_Dictee'><table id='table_spec_Dictee'>";
   	monAction += "<caption>Caractère spéciaux</caption>";
   	monAction += "<tr><td class='spec_Dictee'>«</td>";
   	monAction += "<td class='spec_Dictee'>—</td>";
@@ -211,7 +211,7 @@ function action_Texte_Dictee(){
   	monAction += "<td class='spec_Dictee'>Œ</td>";
   	monAction += "<td class='spec_Dictee'>É</td>";
   	monAction += "<td class='spec_Dictee'>À</td>";
-  	monAction += "<td><a href='#' class='aide'>?</a></td>";
+  	monAction += "<td><a href='#'  title='aide_carspec' class='aide'>?</a></td>";
   	monAction += "</tr></table>";
   	monAction += "<textarea cols='60' rows='10' id='zonetexte_Dictee' class='word_count'>Mon texte</textarea><br />";
   	monAction += "<div id='zonetexte_Dictee_count'>Mots ???</div><br />";
@@ -224,7 +224,7 @@ function action_Texte_Dictee(){
 
 function action_Texte_Echo(){
 	var monAction ="<div id='etape_Action_Texte_Echo'><h2>Saisir le texte initial de la réécriture</h2>";   
-  	monAction += "<form><table id='table_spec_Echo'>";
+  	monAction += "<form name='formulaire_zonetexte_Echo'><table id='table_spec_Echo'>";
   	monAction += "<caption>Caractère spéciaux</caption>";
   	monAction += "<tr><td class='spec_Echo'>«</td>";
   	monAction += "<td class='spec_Echo'>—</td>";
@@ -234,7 +234,7 @@ function action_Texte_Echo(){
   	monAction += "<td class='spec_Echo'>Œ</td>";
   	monAction += "<td class='spec_Echo'>É</td>";
   	monAction += "<td class='spec_Echo'>À</td>";
-  	monAction += "<td><a href='#' class='aide'>?</a></td>";
+  	monAction += "<td><a href='#' title='aide_carspec' class='aide'>?</a></td>";
   	monAction += "</tr></table>";
   	monAction += "<textarea cols='60' rows='10' id='zonetexte_Echo' class='word_count'>Mon texte</textarea><br />";
   	monAction += "<div id='zonetexte_Echo_count'>Mots ???</div><br />";
@@ -247,7 +247,7 @@ function action_Texte_Echo(){
 
 function action_Texte_BIS(){
 	var monAction ="<div id='etape_Action_Texte_BIS'><h2>Saisir le texte transformé</h2>";   
-  	monAction += "<form><table id='table_spec_BIS'>";
+  	monAction += "<form name='formulaire_zoneBIS'><table id='table_spec_BIS'>";
   	monAction += "<caption>Caractère spéciaux</caption>";
   	monAction += "<tr><td class='spec_BIS'>«</td>";
   	monAction += "<td class='spec_BIS'>—</td>";
@@ -257,10 +257,22 @@ function action_Texte_BIS(){
   	monAction += "<td class='spec_BIS'>Œ</td>";
   	monAction += "<td class='spec_BIS'>É</td>";
   	monAction += "<td class='spec_BIS'>À</td>";
-  	monAction += "<td><a href='#' class='aide'>?</a></td>";
+  	monAction += "<td><a href='#'  title='aide_carspec' class='aide'>?</a></td>";
   	monAction += "</tr></table>";
   	monAction += "<textarea cols='60' rows='10' id='zoneBIS'>Mon texte transformé</textarea><br />";
   	monAction += "<input type='submit' value='Enregistrer le texte transformé' />";
+  	monAction += "</form>";
+  	monAction += "</div>";
+    
+	return monAction;
+}
+
+function action_Importer(){
+	var monAction ="<div id='etape_Action_Importer'><h2>Importer un exercice</h2>";   
+  	monAction += "<form name='formulaire_Importer'>";
+  	monAction += "<p>Collez ci-dessous le code à importer.</p>";
+  	monAction += "<textarea cols='60' rows='10' id='zoneImportation'></textarea><br />";
+  	monAction += "<input type='submit' value='Importer cet exercice' />";
   	monAction += "</form>";
   	monAction += "</div>";
     
@@ -318,14 +330,14 @@ function action_Copie_Exerciseur_Echo(){
 
 function contenu_Exerciseur_Dictee(){
 		
-		var contenu = "<ol><li>Obtenez une copie de l'exerciseur jDicto <code>dictee.zip</code><br />";	
+		var contenu = "<ol><li>Obtenez une copie de l'exerciseur jDicto <code>dictee-master.zip</code><br />";	
     	contenu += "en cliquant sur le bouton ci-contre&nbsp;;</li>";
-    	contenu += "<li>Décompressez-la. Vous obtenez un dossier&nbsp;: <code>dictee</code>&nbsp;;</li>";
+    	contenu += "<li>Décompressez-la. Vous obtenez un dossier&nbsp;: <code>dictee-master</code>&nbsp;;</li>";
     	contenu += "<li>Déplacez-y le fichier <code>data.json</code>.</li>";
-    	contenu += "<li>Placez une copie de chaque fichier fichier audio <span id='fic_audio'>...</span> dans le sous-dossier";
+    	contenu += "<li>Placez une copie du fichier audio <span id='fic_audio'>audio.ogg</span> dans le sous-dossier";
     	contenu += " <code>dictee/media</code>.</li></ol>";
     	contenu += "<p>Pour publier cette dictée sur un serveur, renommez, puis compressez à nouveau ce dossier ";
-    	contenu += "<code>dictee</code> mis à jour.</p>";
+    	contenu += "<code>ma_dictee</code> mis à jour.</p>";
   		
 		return contenu;
 }
@@ -343,13 +355,13 @@ function contenu_Exerciseur_Echo(){
 }
 
 function contenu_Pas_A_Pas_Dictee(){
-	var contenu = "<ol><li>Créez les fichiers audio : formats <em>mp3</em> et <em>ogg</em>.</li>";
+	var contenu = "<ol><li>Créez le fichier audio : format <em>ogg</em>.</li>";
 		contenu += "<li>Créez le fichier de données <em>data.json</em> grâce au Générateur.</li>";
-		contenu += "<li>Récupérez une copie de l'exerciseur jDicto <code>dictee.zip</code> et décompressez-la.</li>";
-		contenu += "<li>Copiez votre fichier <code>data.json</code> dans le dossier <code>dictee</code>.</li>";
-		contenu += "<li>Copiez vos fichiers audio, par exemple <code>audio.mp3</code> et <code>audio.ogg</code> ";
-		contenu += "dans le sous-dossier <code>dictee/media</code>.</li>";
-		contenu += "<li>Renommez le dossier <code>dictee</code> sous un nom plus explicite.</li>";
+		contenu += "<li>Récupérez une copie de l'exerciseur jDicto <code>dictee-master.zip</code> et décompressez-la.</li>";
+		contenu += "<li>Copiez votre fichier <code>data.json</code> dans le dossier <code>dictee-master</code>.</li>";
+		contenu += "<li>Copiez votre fichier audio, par exemple <code>audio.ogg</code> ";
+		contenu += "dans le sous-dossier <code>dictee-master/media</code>.</li>";
+		contenu += "<li>Renommez le dossier <code>dictee-master</code> sous un nom plus explicite.</li>";
 		contenu += "<li>Créez une nouvelle archive <em>.zip</em> du dossier de dictée renommé.</li>";
 		contenu += "<li>Déposez cette archive <code>votre_dictee.zip</code> à l'endroit désiré sur le serveur de cours.</li>";
 		contenu += "<li>Décompressez l'archive <code>votre_dictee.zip</code> sur ce serveur. ";
@@ -364,9 +376,9 @@ function contenu_Pas_A_Pas_Dictee(){
 function contenu_Pas_A_Pas_Echo(){
 	var contenu = "<ol>";
 		contenu += "<li>Créez le fichier de données <em>data.json</em> grâce au Générateur.</li>";
-		contenu += "<li>Récupérez une copie de l'exerciseur exEcho <code>execho.zip</code> et décompressez-la.</li>";
-		contenu += "<li>Copiez votre fichier <code>data.json</code> dans le dossier <code>execho</code>.</li>";
-		contenu += "<li>Renommez le dossier <code>execho</code> sous un nom plus explicite.</li>";
+		contenu += "<li>Récupérez une copie de l'exerciseur exEcho <code>execho-master.zip</code> et décompressez-la.</li>";
+		contenu += "<li>Copiez votre fichier <code>data.json</code> dans le dossier <code>execho-master</code>.</li>";
+		contenu += "<li>Renommez le dossier <code>execho-master</code> sous un nom plus explicite.</li>";
 		contenu += "<li>Créez une nouvelle archive <em>.zip</em> du dossier renommé.</li>";
 		contenu += "<li>Déposez cette archive <code>votre_exercice.zip</code> à l'endroit désiré sur le serveur de cours.</li>";
 		contenu += "<li>Décompressez l'archive <code>votre_exercice.zip</code> sur ce serveur. ";
@@ -379,21 +391,22 @@ function contenu_Pas_A_Pas_Echo(){
 } 
 
 function contenu_Audio(){
-	var contenu = "<p>La qualité des fichiers audio est importante. Pour obtenir un enregistrement de qualité, utilisez un ";
+	var contenu = "<p>La qualité du fichier audio est importante. Pour obtenir un enregistrement de qualité, utilisez un ";
 		contenu += " micro USB qui atténuera les bruits de fond et garantira un volume initial suffisant.</p>";
 		contenu += "<p>Je vous recommande l'utilisation du logiciel <em>Audacity</em> pour réaliser cet enregistrement ";
-		contenu += "ainsi que les exportations dans les formats nécessaires.</p>";
-		contenu += "<p>Les caractéristiques du fichier audio sont les suivantes :";
-		contenu += "<table>";
-		contenu += "<tr><td>Mono</td><td>16 000 Hz, 32 bit</td></tr>";
+		contenu += "ainsi que l'exportation dans le format nécessaire.</p>";
+		contenu += "<p>Les caractéristiques du fichier audio offrant un compromis entre taille et qualité sont les suivantes :";
+		contenu += "<table style='border:thin solid grey'>";
+		contenu += "<thead style='background-color:lightgrey;padding:0.2em'><td>Pistes</td><td>Fréquence, Format</td></thead>";
+		contenu += "<tr><td>Mono</td><td>16 kHz, 32 bit</td></tr>";
 		contenu += "</table>";
 		contenu += "</p>";
+		contenu += "<p>Avant d'exporter votre projet audio, veillez à en réduire le bruit de fond et à le normaliser pour obtenir un volume de sortie satisfaisant, sans distorsion. Personnellement, j'y ajoute une amplification des basses.</p>";
 		contenu += "<p>";
-		contenu += "Pour exporter votre enregistrement vers un format compressé dans <em>Audacity</em> :";
-		contenu += "<ol>";
-		contenu += "<li><em>mp3</em> : menu Fichier / exporter comme mp3&hellip;</li>";
-		contenu += "<li><em>ogg</em> : menu Fichier / exporter comme Ogg Vorbis&hellip;</li>";
-		contenu += "</ol></p>";
+		contenu += "Dans les options d'exportation, je choisis le format Ogg (Vorbis) et je place le curseur de qualité à 0 :";
+		contenu += "<ul>";
+		contenu += "<li><em>Dans Audacity</em> : menu Fichier / exporter comme Ogg Vorbis&hellip;</li>";
+		contenu += "</ul></p>";
 		
 		return contenu;
 }
@@ -402,15 +415,15 @@ function contenu_Principe(){
 	var contenu = "<p>L'exercice s'exécute au moyen d'un fichier de données <code>data.json</code> et d'un exerciseur :";
 		contenu += " le fichier d'interface <code>dictee.html</code> ou <code>execho.html</code>.</p>";
 		contenu += "<p>Pour créer le fichier de données <code>data.json</code>, vous devez utiliser le Générateur.</p>";
-		contenu += "<p>Vous téléchargerez ensuite une copie de l'exerciseur approprié, <code>dictee.zip</code> ou <code>execho.zip</code>.</p>";
-		contenu += "<p>Pour publier votre exercice, vous décompresserez d'abord <code>dictee.zip</code> ou <code>execho.zip</code>,";
-		contenu += " vous copierez le fichier <code>data.json</code> dans le dossier décompressé <code>dictee</code> ou <code>execho</code>.</p>";
-		contenu += "<p>Ainsi que les fichiers audio <code>votre_audio.mp3</code> et <code>votre_audio.ogg</code> ";
+		contenu += "<p>Vous téléchargerez ensuite une copie de l'exerciseur approprié, <code>dictee-master.zip</code> ou <code>execho-master.zip</code>.</p>";
+		contenu += "<p>Pour publier votre exercice, vous décompresserez d'abord <code>dictee-master.zip</code> ou <code>execho-master.zip</code>,";
+		contenu += " vous copierez le fichier <code>data.json</code> dans le dossier décompressé <code>dictee-master</code> ou <code>execho-master</code>.</p>";
+		contenu += "<p>Ainsi que le fichier audio <code>votre_audio.ogg</code> ";
 		contenu += "dans le dossier <code>dictee/media</code> pour un exercice de dictée.</p>";
 		contenu += "<p>Le dossier de l'exercice, ainsi complété, sera finalement publié sur un serveur de ";
 		contenu += "cours et vous ferez finalement un lien vers le fichier <code>dictee.html</code> ou <code>execho.html</code>.</p>";
 		contenu += "<p>N.B.: Pour déplacer facilement le dossier complété, utilisez un logiciel";
-		contenu += " d'archivage comme <em>7zip</em>. Vous penserez enfin à décompresser cette archive une fois qu'elle ";
+		contenu += " d'archivage comme <em>peazip</em>. Vous penserez enfin à décompresser cette archive une fois qu'elle ";
 		contenu += "sera déposée sur le serveur.</p>";
 		
 		return contenu;
@@ -419,7 +432,8 @@ function contenu_Principe(){
 function contenu_Presentation(){
 	var contenu = "<p>JDicto permet de créer des dictées interactives ou des exercices de Réécriture. ";
 		contenu += "Son objectif est d'assurer un fonctionnement ";
-		contenu += "de cet exercice sur toutes les plateformes : PC, Mac, tablettes ou Smartphones sous iOS, Androïd, etc.</p>";
+		contenu += "de cet exercice sur toutes les plateformes récentes, ";
+		contenu += "à condition d'utiliser un navigateur compatible : Firefox, Chrome, etc..</p>";
 		contenu += "<p>Pour voir un exemple :</p>";
 		contenu += "<ul><li>De dictée : menu <em>Actions / exemple de dictée</em>&nbsp;;</li>";
 		contenu += "<li>De réécriture : menu <em>Actions / exemple de réécriture</em></li></ul>";
@@ -429,11 +443,11 @@ function contenu_Presentation(){
 		contenu += "<li>Une réécriture : menu <em>Actions / nouvelle réécriture&hellip;</em></li></ul>";
 		contenu += "<p>Les données des exercices sont automatiquement enregistrées dans l'espace privé de l'application. ";
 		contenu += "Pour modifier une dictée ou une réécriture précédente&nbsp;:</p>";
-		contenu += "<ul><li>Menu <em>Actions / éditer&hellip;</em></li>";
-		contenu += "<p>Il n'est pas encore possible d'enregistrer de fichier audio dans JDicto, mais cette fonctionnalité sera ";
-		contenu += "ajoutée dès que la capture audio sera complètement supportée par les navigateurs.</p>";
+		contenu += "<ul><li>Menu <em>Actions / Ouvrir&hellip;</em></li></ul>";
+		contenu += "<p>Pour importer un exercice créé sur un autre ordinateur :</p>";
+		contenu += "<ul><li>Menu <em>Actions / Importer&hellip;</em></li></ul>";
 		contenu += "<p>Pour créer les enregistrements nécessaires, consultez la section ";
-		contenu += "<em>Aide / Fichiers audio</em>.</p>";
+		contenu += "<em>Aide / Fichier audio</em>.</p>";
 		
 		return contenu;
 }
@@ -443,6 +457,13 @@ function contenu_Modifier(){
 		contenu += "<li>Pour éditer un contenu, cliquez sur le crayon... <img src='generateur/img/editer.png' align='bottom' /></li>";
 		contenu += "<li>Pour supprimer un contenu, cliquez sur la corbeille... ";
 		contenu += "<img src='generateur/img/poubelle.png' align='bottom' /></li></ul>";
+		
+		return contenu;
+}
+
+function contenu_Importer(){
+	var contenu = "<ol><li>Collez dans la zone de texte le code du fichier json que vous souhaitez importer.</li>";
+		contenu += "<li>Cliquez sur le bouton importer...</li></ol>";
 		
 		return contenu;
 }
@@ -461,11 +482,11 @@ function contenu_Code(){
 
 function contenu_Aide_Audio(){
 			var msg_aide = "Afin de garantir la compatibilité avec les tablettes qui n'utilisent pas de Flash, ";
-			msg_aide += "il convient de placer deux formats audio du même enregistrement :</p>";
-			msg_aide += "<ol><li>format mp3</li><li>format ogg</li></ol>";
-			msg_aide += "<p>Indiquez seulement le nom commun du fichier dans le champ audio,<br />";
-			msg_aide += "<em>sans son extension : ni .mp3 ni .ogg.</em></p>";
-			msg_aide += "<p>Par exemple, si vous avez deux fichiers : <em>dictee62.mp3</em> et <em>dictee62.ogg</em>, ";
+			msg_aide += "il convient d'utiliser un format audio compatible avec la balise audio HTML5.</p>";
+			msg_aide += "<ul><li>C'est le format <em>ogg</em> qui a été retenu dans JDicto.</li></ul>";
+			msg_aide += "<p>Indiquez seulement le nom du fichier dans le champ audio,<br />";
+			msg_aide += "<em>sans son extension : c-à-d sans <code>.ogg.</code></em></p>";
+			msg_aide += "<p>Par exemple, si vous avez un fichier : <em>dictee62.ogg</em>, ";
 			msg_aide += "indiquez seulement dans le champ 'Nom du fichier audio'&nbsp;: <em>dictee62</em>.";
 			
 			return msg_aide;
@@ -474,7 +495,7 @@ function contenu_Aide_Audio(){
 function pied_bis(){
 	// Pied de page BIS 
   var pied = "<footer><img src='generateur/img/icon_128.png' alt='logo' width='10%' /> ";
-  pied += "JDicto - © 2012 Patrick Cardona</footer>";
+  pied += "JDicto - © 2012-2013 Patrick Cardona</footer>";
 
 	return pied;
 }

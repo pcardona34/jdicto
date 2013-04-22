@@ -231,5 +231,86 @@ function lireFichier(key) {
   	
   }
   
+  /* Importation : données collées dans la zone de texte */
+  /*
+   * Propager les données à partir du code :
+   */
+  function propagerCode(code) {
+
+   try{
+		var data = $.parseJSON(code);
+    /*
+     * On affiche un formulaire de création à remplir avec les données récupérées
+     */
+    
+    /*
+     * Récupération des données :
+     */
+      if(data.app_name != "undefined"){
+		switch(data.app_name){
+      	
+      	case "jDicto":
+      	case "jdicto":
+      		// Données éditoriales :
+	      	$("#edito_dictee_0").val(data.titre);
+	        $("#edito_dictee_1").val(data.auteur);
+	        $("#edito_dictee_2").val(data.ouvrage);
+	        $("#edito_dictee_3").val(data.prof);
+	        $("#edito_dictee_4").val(data.audio);
+	        
+	        // On remplit la zone de texte :
+        
+	        $("#zonetexte_Dictee").val(data.texte);
+	        // On affiche la zone des données éditoriales et on masque la zone courante
+	        $("*[div*=etape]").each(function(){
+	        	$(this).hide();
+	        });
+	        $("#etape_Action_Creation_Dictee").show();
+	        $("#etape_Action_Importer").hide();
+	        
+	        $("#titre_aide").text("Pas à pas : dictée");
+			$("#contenu_aide").html(contenu_Pas_A_Pas_Dictee());
+			$("#zone_aide").show();
+      	break;
+      	
+      	case "jecho":
+      	case "execho":
+      		// Données éditoriales :
+	      	$("#edito_echo_0").val(data.titre);
+	        $("#edito_echo_1").val(data.auteur);
+	        $("#edito_echo_2").val(data.ouvrage);
+	        $("#edito_echo_3").val(data.prof);
+	        
+	        
+	        // On remplit les zones de texte :
+        
+	        $("#zonetexte_Echo").val(data.texte);
+	        $("#zoneBIS").val(data.correction);
+	        $("#zoneConsigne").val(data.consigne);
+	        // On affiche la zone des données éditoriales et on masque la zone courante
+	        $("*[div*=etape]").each(function(){
+	        	$(this).hide();
+	        });
+	        $("#etape_Action_Creation_Echo").show();
+	        $("#etape_Action_Importer").hide();
+	        
+	        $("#titre_aide").text("Pas à pas : réécriture");
+			$("#contenu_aide").html(contenu_Pas_A_Pas_Echo());
+			$("#zone_aide").show();
+      	break;
+      	
+      	default:
+			jAlert("Le code n'est pas conforme. Veuillez importer une dictée (format JDicto) ou une réécriture (format Execho).");
+      	
+      } // fin switch
+	} // fin if
+} // fin try
+catch(e){
+ jAlert('Erreur. Le code soumis ne peut être importé : '+e.message);
+}
+   
+            
+} // fin fonction propagerCode
+  
   
 
