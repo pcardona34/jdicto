@@ -1,0 +1,162 @@
+/* 
+ * commun.css
+ * 
+ * Feuille de style de l'accueil et de la licence de Reperage :
+ *  cf. index.html et licence.html
+ * ( c ) 2012 Patrick Cardona
+ * Version : 1.2.0
+ * 
+ * @source: http://code.google.com/p/reperage/
+ * 
+ */
+
+/* =================================================================== */
+/* LICENCE
+/* =================================================================== */
+/*
+@licstart  The following is the entire license notice for the 
+    CSS code in this page.
+
+Copyright (C) 2012  Patrick CARDONA - Reperage
+
+    The CSS code in this page is free software: you can
+    redistribute it and/or modify it under the terms of the GNU
+    General Public License (GNU GPL) as published by the Free Software
+    Foundation, either version 3 of the License, or (at your option)
+    any later version.  The code is distributed WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS
+    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+    As additional permission under GNU GPL version 3 section 7, you
+    may distribute non-source (e.g., minimized or compacted) forms of
+    that code without the copy of the GNU GPL normally required by
+    section 4, provided you include this license notice and a URL
+    through which recipients can access the Corresponding Source.
+    
+@licend  The above is the entire license notice
+    for the CSS code in this page.    
+*/
+
+#wrapper {
+	width:100%;
+	margin: 0 auto 0 auto;
+}
+
+#main {
+	float:left;
+	margin: 0 0 50px 0;
+}
+
+#sidebar {
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	margin-top:1em;
+}
+
+footer {
+	clear:both;
+	text-align: center;
+	font-size:0.8em;
+	background-color:#777;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-o-border-radius:20px;
+	border-radius:20px;
+	-moz-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+	-o-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+	box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+}
+
+#wrapper>nav {
+	padding:1em;
+	border:1px solid #444;
+	margin-top:1em;
+}
+
+nav ul li {
+	display:inline-block;
+}
+
+article {
+	border:2px solid #1E90FF;
+	margin:1em;
+	padding:1em;
+	background:#CCC;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-o-border-radius:20px;
+	border-radius:20px;
+}
+
+article h2 {
+	margin-top: 1em;
+}
+
+article header, article footer {
+	/*border:1px solid ; */
+	padding:0.3em;
+	padding-left:3em;
+	background:#ffcc66;
+	/*background-color:#777;*/
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	-o-border-radius:20px;
+	border-radius:20px;
+	-moz-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+	-webkit-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+	-o-box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+	box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+}
+
+aside {
+	/*border:1px solid #444;*/
+}
+
+article aside {
+	/* background:#fff; */
+	margin:1em 3em;
+	padding:0.5em;
+	/* border:1px dashed #ccc; */
+}
+
+/* Marquage spécifique */
+
+article, footer, header, aside, nav {
+	position:relative;
+}
+
+h1{
+	color:#1E90FF;
+	text-align: center;
+}
+
+code {
+	color:#FF0000;
+	font-size:1.3em;
+}
+
+a,a:visited{
+	color:#1E90FF;
+}
+
+a:hover{
+	color:red;
+}
+
+.mentions a{
+	color:green;
+}
+
+a:hover{
+	color:red;
+}
