@@ -1,12 +1,7 @@
 {
   "name": "JDicto",
-<<<<<<< HEAD
-  "description": "Générateur de dictée",
-  "version": "1.4.0",
-=======
   "description": "Générateur de dictée ou de réécriture",
-  "version": "1.3.4",
->>>>>>> FETCH_HEAD
+  "version": "1.4.0",
   "app": {
     "launch": {
       "web_url": "*://pcardona34.github.com/jdicto/"
@@ -20,4 +15,3 @@
      ],
   "manifest_version": 2
 }
-

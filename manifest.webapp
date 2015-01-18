@@ -1,37 +1,18 @@
 {
-<<<<<<< HEAD
-  "name": "JDicto",
-  "description": "Générateur de dictée",
-  "version": "1.4.0",
-  "app": {
-    "launch": {
-      "local_path": "index.html"
-=======
-    "version": "1.3.4",
+    "version": "1.4.0",
     "name": "JDicto",
-    "description": "Générateur de dictée ou de réécriture",
+    "description": "Générateur de dictée et de réécriture",
     "developer": {
         "name": "Patrick Cardona",
-        "url": "https://github.com/pcardona34/jdicto"
+        "url": "http://code.google.com/u/111418728371065641132/"
     },
-    "launch_path":"/jdicto",
     "installs_allowed_from": [
         "*"
     ],
     "icons": {
-        "16": "/jdicto/generateur/img/icon_16.png",
-        "48": "/jdicto/generateur/img/icon_48.png",
-        "128": "/jdicto/generateur/img/icon_128.png"
->>>>>>> FETCH_HEAD
-    }
-  },
-  "icons": {
-    "16": "generateur/img/icon_16.png",
-    "48": "generateur/img/icon_48.png",
-    "128": "generateur/img/icon_128.png"
-  },
-  "permissions": [
-          "unlimitedStorage"
-     ]
+        "16": "/generateur/img/icon_16.png",
+        "48": "/generateur/img/icon_48.png",
+        "128": "/generateur/img/icon_128.png"
+    },
+    "launch_path": "/index.html"
 }
-
