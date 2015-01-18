@@ -3,7 +3,7 @@
  * 
  * Gestion des événements dans le générateur de jDicto
  * (c) 2012 - Patrick Cardona
- * jDicto version : 1.3.0
+ * jDicto version : 1.4.0
  * 
  * @source: http://code.google.com/p/jdicto/
  * 
@@ -114,8 +114,9 @@ $('document').click(function(){
 /*
  * On charge les zones de l'interface :
  */	
-// D'abord Edition, puis création
+// D'abord Edition, importation, puis création
 $("#monAction").html(action_Edition());
+$("#monAction").append(action_Importer());
 $("#monAction").append(action_Creation_Dictee());
 $("#monAction").append(action_Creation_Echo());
 
@@ -155,6 +156,30 @@ $("#FinAction").append(action_Copie_Exerciseur_Echo());
 	var aide = new Aide();
 	
 	/*
+	 * On affiche l'interface la première fois
+	 */
+
+	function intro(){
+	// On masque les zones non sollicitées
+		$("#chemin_fichier").hide();
+		$("*[id*=etape]").each(function(){
+			$(this).hide();
+		});
+	
+		$("#copy").show();
+		/*
+		 * On vide les champs
+		 */
+		$("*[id*=edito_]").each(function(){
+			$(this).val("");
+		});
+		aide.titre = "Présentation";
+		aide.contenu = contenu_Presentation();
+		aide.affiche();
+		
+	}
+	
+	/*
 	 * Lien : présentation
 	 */
 	$("a[title='Présentation']").click(function(e){
@@ -174,7 +199,7 @@ $("#FinAction").append(action_Copie_Exerciseur_Echo());
 		
 		$("#logo").animate(
 					{
-					width:501,
+					width:511,
 					heigth: 200,
 					top:0,
 					opacity:100},{
@@ -321,7 +346,7 @@ $("#FinAction").append(action_Copie_Exerciseur_Echo());
 	
 	// Gestionnaire de l'aide contextuelle
 	$("a[title='Noms des fichiers audio']").click(function(e){
-		aide.titre = "Noms des fichiers audio";
+		aide.titre = "Nom du fichier audio";
 		aide.contenu = contenu_Aide_Audio();
 		aide.affiche();
 		e.preventDefault(); // empêche le suivi du lien ou le rechargement de la page
@@ -447,10 +472,50 @@ $("#FinAction").append(action_Copie_Exerciseur_Echo());
 		e.preventDefault();
 	});
 	
-	
+	/*
+	 * Importer une dictée
+	 */
+	$("a[title='Importer une dictée ou une réécriture']").click(function(e){
+		$("#logo").animate(
+					{
+					width:0,
+					heigth: 0,
+					top:0,
+					opacity:0},{
+						duration: 1500,
+    					easing: 'linear',
+    					complete: function(){
+    						
+				    			$("*[id*=etape]").each(function(){
+				    				$(this).hide();
+				    			});
+				    			$("#etape_Action_Importer").show();
+				    							    			
+				    			$("footer").show();
+				    			$("#copy").hide();
+				    			
+				    				
+				    		
+						}
+					});
+		aide.titre = "Importer une dictée ou une réécriture";
+		aide.contenu = contenu_Importer();
+		aide.affiche();
+		// On vide le code stocké :
+		dictee.code = "";
+		dictee.version = obtientDate();
+		echo.code = "";
+		echo.version = obtientDate();
+		
+		e.preventDefault();
+	});
+
+/* *************************************************************** */
 	
 	// On affiche la présentation par défaut :
-	$("a[title=Présentation]").click();
+	
+/* *************************************************************** */	
+	intro();
 
 /*
  * Suite de l'initialisation de l'interface
@@ -460,54 +525,57 @@ $("#FinAction").append(action_Copie_Exerciseur_Echo());
 $("#barre").reportprogress(0);
 
 // Caractères spéciaux
-	$(".spec_Dictee").click(function(){	
-			var carspec = $(this).text();			
-			var texte = $("#zonetexte_Dictee").val();
-			var texte2 = texte.substring(0,position);
-			var texte3 = texte.substring(position);
-			var texte = texte2 + carspec + texte3;
-			$("#zonetexte_Dictee").val( texte );
-			// On replace le curseur après le caractère inséré :
-			$("#zonetexte_Dictee").focus();
-			$("#zonetexte_Dictee").caret(position + 1)
-			
+function insertion(car,zone) {
+		var input = document.forms['formulaire_'+ zone].elements[zone];
+		input.focus();
+  
+		if(typeof input.selectionStart != 'undefined')
+		{
+			/* Insertion du code */
+		var start = input.selectionStart;
+		var end = input.selectionEnd;
+		var insText = input.value.substring(start, end);
+		input.value = input.value.substr(0, start) + car + input.value.substr(end);
+			/* Ajustement de la position du curseur */
+		var pos;
+		pos = start + car.length;
+		input.selectionStart = pos;
+		input.selectionEnd = pos;
+		}
+}
+	
+	$(".spec_Dictee").click(function(e){
+		var car = $(this).text();
+		insertion(car, 'zonetexte_Dictee');
+		e.preventDefault();
 		});
+
 		
-// Caractères spéciaux
-	$(".spec_Echo").click(function(){			
-			var carspec = $(this).text();			
-			var texte = $("#zonetexte_Echo").val();
-			var texte2 = texte.substring(0,position);
-			var texte3 = texte.substring(position);
-			var texte = texte2 + carspec + texte3;
-			$("#zonetexte_Echo").val( texte );
-			// On replace le curseur après le caractère inséré :
-			$("#zonetexte_Echo").focus();
-			$("#zonetexte_Echo").caret(position + 1)
+	$(".spec_Echo").click(function(e){			
+		var car = $(this).text();
+		insertion(car, 'zonetexte_Echo');
+		e.preventDefault();			
 		});
 		
 	// Caractères spéciaux
-	$(".spec_BIS").click(function(){
-			var carspec = $(this).text();			
-			var texte = $("#zoneBIS").val();
-			var texte2 = texte.substring(0,position);
-			var texte3 = texte.substring(position);
-			var texte = texte2 + carspec + texte3;
-			$("#zoneBIS").val( texte );
-			// On replace le curseur après le caractère inséré :
-			$("#zoneBIS").focus();
-			$("#zoneBIS").caret(position + 1)
+	$(".spec_BIS").click(function(e){
+		var car = $(this).text();	
+		insertion(car, 'zoneBIS');
+		e.preventDefault();			
 		});
 	
 	
 	// Aide contextuelle
 	$(".aide").click(function(e){
-			jAlert ("Cliquez sur un caractère spécial pour l'insérer dans votre texte.","Aide : insertion de caractères");
+			jAlert ("Placez le curseur à l'endroit désiré. Cliquez sur un caractère spécial pour l'insérer dans votre texte.","Aide : insertion de caractères");
 			e.preventDefault();
 		});
 
+/* ************************************************************** */
 
 // Gestionnaire d'événement : quand on clique sur un bouton…
+
+/* ************************************************************** */
 $("input:submit").click(function(e){
 	
 	// On applique le style Bouton enfoncé...
@@ -673,13 +741,13 @@ $("input:submit").click(function(e){
 		
 		case "Télécharger une dictée...":
 			
-    			window.location.href = "./generateur/res/dictee.zip";
+    			window.location.href = "https://github.com/pcardona34/dictee/archive/master.zip";
 			
 		break;
 		
 		case "Télécharger une réécriture...":
 			
-    			window.location.href = "./generateur/res/execho.zip";
+    			window.location.href = "https://github.com/pcardona34/execho/archive/master.zip";
 			
 		break;
 		
@@ -689,6 +757,14 @@ $("input:submit").click(function(e){
     		aide.titre = "Et maintenant... ?";
     		aide.contenu = contenu_Code();
     		aide.affiche();
+			
+		break;
+		
+		case "Importer cet exercice":
+			var code = $("#zoneImportation").val();
+    		
+    		propagerCode(code);
+			
 			
 		break;
 		

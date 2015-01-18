@@ -43,7 +43,7 @@ Copyright (C) 2012  Patrick CARDONA - jDicto
 }
 
 #table_spec caption, #table_spec_Dictee caption, #table_spec_Echo caption, #table_spec_BIS caption{
-	color:#886699;
+	/*color:#886699;*/
 }
 
 .spec, .spec_Dictee, .spec_Echo, .spec_BIS {
@@ -60,12 +60,8 @@ Copyright (C) 2012  Patrick CARDONA - jDicto
     border-radius: 10px;	
 }
 
-.spec:hover, .spec_Dictee:hover, .spec_Echo:hover, .spec_BIS:hover {
-	background-color:#CC99FF;
-	cursor:pointer;
-	box-shadow:
-	0px 2px 2px 0px rgba(0, 0, 0, 0.5),
-	0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+a[title='aide_carspec'], a[title='aide_carspec']:visited {
+	color:white;
 }
 
 .aide {
@@ -80,6 +76,16 @@ Copyright (C) 2012  Patrick CARDONA - jDicto
     -khtml-border-radius: 5px;
     border-radius: 5px;	
 }
+
+.spec:hover, .spec_Dictee:hover, .spec_Echo:hover, .spec_BIS:hover {
+	background-color:#CC99FF;
+	cursor:pointer;
+	box-shadow:
+	0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+	0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+
 
 .aide:hover{
 	background-color: #6cf;

@@ -12,42 +12,26 @@
     <link rel="stylesheet" type="text/css" href="generateur/css/menu.css" />
     
     <!-- Feuilles de style de libs partagées -->
-    <link rel="stylesheet" type="text/css" href="dictee/lib/css/jquery.alerts.css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/jquery.alerts.css" />
     
     <!-- Feuilles de style de libs -->
     <link rel="stylesheet" type="text/css" href="generateur/css/progress.css" />
     
     <!-- Feuilles de style partagées -->
-    <link rel="stylesheet" type="text/css" href="dictee/lib/css/apropos.css" />
-    <link rel="stylesheet" type="text/css" href="dictee/lib/css/carspec.css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/apropos.css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/carspec.css" />
     
     <!-- Feuilles de style liées à cette page -->
     <link rel="stylesheet" type="text/css" href="generateur/css/generateur.css" />
     
-    <!-- Libs JavaScript partagées -->
-    <script src="dictee/lib/js/jquery-1.7.1.js"></script>
-    <script src="generateur/js/menu.js"></script>
-    <script src="dictee/lib/js/jquery.alerts.js"></script>
     
-    <!-- Libs JavaScript liées à cette page -->
-    <script src="generateur/js/jqueryprogressbar.js"></script>
-    <script src="generateur/js/jquery-url.js"></script>
-    
-    <!-- Scripts communs -->
-    <script src="dictee/lib/js/apropos.js"></script>
-    <script src="dictee/lib/js/lic.js"></script>
-    
-    <!-- Scripts liés à cette page -->
-    <script src="generateur/js/fichiers.js"></script>
-    <script src="generateur/js/generateur.js"></script>
-    <script src="generateur/js/compteur_de_mots.js"></script>
-    <script src="generateur/js/interface.js"></script>
+	
     
   </head>
   <body>
 
 <header> 	
-	<h1 id="titre">Le générateur de Dictée</h1>
+	<h1 id="titre">Le générateur de Dictée ou de Réécriture</h1>
 </header>
 
 
@@ -70,11 +54,12 @@
 					<ul>
 						<li><a href="#" title="Créer une dictée">Nouvelle dictée&hellip;</a></li>
 						<li><a href="#" title="Créer une réécriture">Nouvelle réécriture&hellip;</a></li>
-						<li><a href="#" title="Modifier une dictée ou une réécriture">Éditer...</a></li>
+						<li><a href="#" title="Modifier une dictée ou une réécriture">Ouvrir...</a></li>
+						<li><a href="#" title="Importer une dictée ou une réécriture">Importer...</a></li>
 						<li><a href="#" title="Exerciseur de dictée">Exerciseur de dictée</a></li>
 						<li><a href="#" title="Exerciseur de réécriture">Exerciseur de réécriture</a></li>
-						<li><a href="./dictee/dictee.html" target="_blank" title="Exemple de dictée">Exemple de dictée</a></li>
-						<li><a href="./execho/execho.html" target="_blank" title="Exemple de réécriture">Exemple de réécriture</a></li>
+						<li><a href="http://pcardona34.github.com/dictee/dictee.html" target="_blank" title="Exemple de dictée">Exemple de dictée</a></li>
+						<li><a href="http://pcardona34.github.com/execho/execho.html" target="_blank" title="Exemple de réécriture">Exemple de réécriture</a></li>
 						
 					</ul>
 				</li>
@@ -83,17 +68,15 @@
 						<li><a href="#" title="Principe">Principe</a></li>
 						<li><a href="#" title="Pas à pas : dictée">Pas à pas : dictée</a></li>
 						<li><a href="#" title="Pas à pas : réécriture">Pas à pas : réécriture</a></li>
-						<li><a href="#" title="Préparation des fichiers audio">Fichiers audio</a></li>
-						<li><a href="#" title="Noms des fichiers audio">Noms des fichiers audio</a></li>
+						<li><a href="#" title="Préparation des fichiers audio">Fichier audio</a></li>
+						<li><a href="#" title="Noms des fichiers audio">Nom du fichier audio</a></li>
 						
 					</ul>
 				</li>
 				<li><a href="#">Liens utiles <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
 					<ul>
-						<li><a href="http://www.spiroo.be/7zip/" target="_blank">7-zip</a></li>
+						<li><a href="http://peazip.sourceforge.net/" target="_blank">Peazip</a></li>
 						<li><a href="http://audacity.sourceforge.net/?lang=fr" target="_blank">Audacity</a></li>
-						<li><a href="http://lame.sourceforge.net/index.php" target="_blank">Lame (codecs mp3)</a></li>
-						<li><a href="http://www.tutoriels-animes.com/comment-installer-lame-mp3-dans-audacity.html" target="_blank">Installer Lame pour Audacity</a></li>
 					</ul>	
 						
 				
@@ -102,7 +85,7 @@
 					<ul>
 						<li><a href="#" title="apropos">JDicto&hellip;</a></li>
 						<li><a href="#" title="Licence" rel="jslicense">Licence</a></li>
-						<li><a href="http://code.google.com/p/jdicto/" target="_blank">Code source, problèmes connus&hellip;</a></li>
+						<li><a href="https://github.com/pcardona34/jdicto/archive/master.zip" target="_blank">Code source, problèmes connus&hellip;</a></li>
 					</ul>
 				</li>
 				
@@ -128,7 +111,7 @@
 	<!-- Pied de page initial -->
 	<figure style="text-align: center">
 		<img src="generateur/img/generateur-jdicto.png" alt="Logo générateur de jDicto" id="logo" />
-		<p id="copy">JDicto - © 2012 Patrick Cardona</p>
+		<p id="copy">JDicto - © 2012-2013 Patrick Cardona</p>
 	</figure>
 		
 </section>
@@ -140,6 +123,24 @@
 </aside>
   
   
-  
+  <!-- Optimisation du code Javascript chargé en fin de page-->
+  <!-- Libs JavaScript partagées -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="generateur/js/menu.js"></script>
+    <script src="lib/js/jquery.alerts.js"></script>
+    
+    <!-- Libs JavaScript liées à cette page -->
+    <script src="generateur/js/jqueryprogressbar.js"></script>
+    <!--<script src="generateur/js/jquery-url.js"></script>-->
+    
+    <!-- Scripts communs -->
+    <script src="lib/js/apropos.js"></script>
+    <script src="lib/js/lic.js"></script>
+    
+    <!-- Scripts liés à cette page -->
+    <script src="generateur/js/fichiers.js"></script>
+    <script src="generateur/js/generateur.js"></script>
+    <script src="generateur/js/compteur_de_mots.js"></script>
+    <script src="generateur/js/interface.js"></script>
   </body>
 </html>

@@ -115,6 +115,10 @@ a[title^="aide"]:hover{
 	cursor:help;	
 }
 
+a[title^="aide"]:hover{
+	cursor:help;	
+}
+
 a[title="aide_audio"]{
 	background-color: #886699;
 	color:#FFFFFF;
