@@ -5,50 +5,50 @@
     <meta charset="utf-8">
     <meta name="author" content="Patrick CARDONA" />
     <meta name="copyright" content="Patrick CARDONA" />
-    
+
     <title>Générateur de JDicto</title>
-    
+
     <!-- Feuille de style du menu -->
     <link rel="stylesheet" type="text/css" href="generateur/css/menu.css" />
-    
+
     <!-- Feuilles de style de libs partagées -->
     <link rel="stylesheet" type="text/css" href="lib/css/jquery.alerts.css" />
-    
+
     <!-- Feuilles de style de libs -->
     <link rel="stylesheet" type="text/css" href="generateur/css/progress.css" />
-    
+
     <!-- Feuilles de style partagées -->
     <link rel="stylesheet" type="text/css" href="lib/css/apropos.css" />
     <link rel="stylesheet" type="text/css" href="lib/css/carspec.css" />
-    
+
     <!-- Feuilles de style liées à cette page -->
     <link rel="stylesheet" type="text/css" href="generateur/css/generateur.css" />
-    
-    
-	
-    
+
+
+
+
   </head>
   <body>
 
-<header> 	
+<header>
 	<h1 id="titre">Le générateur de Dictée ou de Réécriture</h1>
 </header>
 
 
-	   
+
 <!-- Si Javascript n'est pas autorisé -->
 <noscript>
 	<h1>Erreur !</h1>
-	<p>Votre navigateur ne prend pas en charge l'exécution de scripts. 
+	<p>Votre navigateur ne prend pas en charge l'exécution de scripts.
 		<br />Veuillez autoriser l'exécution de JavaScript et recharger cette application.</p>
 </noscript>
 
-<section> 
+<section>
 <!-- menu déroulant -->
 <nav id="menu">
-	
+
 	<ul id="MenuDeroulant">
-				
+
 				<li><a href="#" title="Présentation" id="menu_accueil">Accueil</a></li>
 				<li><a href="#">Actions <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
 					<ul>
@@ -58,9 +58,9 @@
 						<li><a href="#" title="Importer une dictée ou une réécriture">Importer...</a></li>
 						<li><a href="#" title="Exerciseur de dictée">Exerciseur de dictée</a></li>
 						<li><a href="#" title="Exerciseur de réécriture">Exerciseur de réécriture</a></li>
-						<li><a href="http://pcardona34.github.com/dictee/dictee.html" target="_blank" title="Exemple de dictée">Exemple de dictée</a></li>
+						<li><a href="http://pcardona34.github.com/dictee/" target="_blank" title="Exemple de dictée">Exemple de dictée</a></li>
 						<li><a href="http://pcardona34.github.com/execho/execho.html" target="_blank" title="Exemple de réécriture">Exemple de réécriture</a></li>
-						
+
 					</ul>
 				</li>
 				<li><a href="#">Aide <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
@@ -70,16 +70,16 @@
 						<li><a href="#" title="Pas à pas : réécriture">Pas à pas : réécriture</a></li>
 						<li><a href="#" title="Préparation des fichiers audio">Fichier audio</a></li>
 						<li><a href="#" title="Noms des fichiers audio">Nom du fichier audio</a></li>
-						
+
 					</ul>
 				</li>
 				<li><a href="#">Liens utiles <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
 					<ul>
 						<li><a href="http://peazip.sourceforge.net/" target="_blank">Peazip</a></li>
 						<li><a href="http://audacity.sourceforge.net/?lang=fr" target="_blank">Audacity</a></li>
-					</ul>	
-						
-				
+					</ul>
+
+
 				</li>
 				<li><a href="#">À propos <img src="generateur/img/fleche-bas.png" alt="flèche" align="bottom" /></a>
 					<ul>
@@ -88,10 +88,10 @@
 						<li><a href="https://github.com/pcardona34/jdicto/archive/master.zip" target="_blank">Code source, problèmes connus&hellip;</a></li>
 					</ul>
 				</li>
-				
+
 				<li><a href="#" title="Contact">Contact</a></li>
 	</ul>
-	
+
 </nav>
 
 </section>
@@ -99,21 +99,21 @@
 <!-- Zone d'affichage des actions -->
 <section id="actions">
 
-	
-	
+
+
 	<div id="monAction">
 		&nbsp;
 	</div>
 	<div id="FinAction">
 		&nbsp;
 	</div>
-	
+
 	<!-- Pied de page initial -->
 	<figure style="text-align: center">
 		<img src="generateur/img/generateur-jdicto.png" alt="Logo générateur de jDicto" id="logo" />
-		<p id="copy">JDicto - © 2012-2013 Patrick Cardona</p>
+		<p id="copy">JDicto - © 2012-2015 Patrick Cardona</p>
 	</figure>
-		
+
 </section>
 
 <!-- Zone d'affichage de l'aide -->
@@ -121,22 +121,22 @@
 		<h2 id="titre_aide">Titre aide</h2>
 		<div id="contenu_aide">Contenu de l'aide…</div>
 </aside>
-  
-  
+
+
   <!-- Optimisation du code Javascript chargé en fin de page-->
   <!-- Libs JavaScript partagées -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <script src="generateur/js/menu.js"></script>
     <script src="lib/js/jquery.alerts.js"></script>
-    
+
     <!-- Libs JavaScript liées à cette page -->
     <script src="generateur/js/jqueryprogressbar.js"></script>
     <!--<script src="generateur/js/jquery-url.js"></script>-->
-    
+
     <!-- Scripts communs -->
     <script src="lib/js/apropos.js"></script>
     <script src="lib/js/lic.js"></script>
-    
+
     <!-- Scripts liés à cette page -->
     <script src="generateur/js/fichiers.js"></script>
     <script src="generateur/js/generateur.js"></script>
