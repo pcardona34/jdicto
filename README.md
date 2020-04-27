@@ -1,4 +1,4 @@
-Cette application est obsolète : je vous recommande de considérer le nouveau projet, [ejDicto](../ejdicto)
+Cette application est obsolète : je vous recommande de considérer le nouveau projet, [ejDicto](https://github.com/pcardona34/ejdicto)
 
 jdicto
 ======
